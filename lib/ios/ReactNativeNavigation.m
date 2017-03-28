@@ -1,8 +1,12 @@
 
 #import "ReactNativeNavigation.h"
-
+#if __has_include(<React/RCTBridge.h>)
 #import <React/RCTBridge.h>
 #import <React/RCTUIManager.h>
+#else
+#import "RCTBridge.h"
+#import "RCTUIManager.h"
+#endif
 
 #import "RNNEventEmitter.h"
 #import "RNNSplashScreen.h"
